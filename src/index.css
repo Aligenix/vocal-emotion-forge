@@ -2,41 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* NEURA Design System - Dark gradient theme for speech development */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Dark theme - primary palette */
+    --background: 240 10% 3.9%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 240 10% 6%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 240 10% 6%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
+    /* NEURA brand colors - purple/blue gradient system */
+    --primary: 260 75% 65%;
     --primary-foreground: 210 40% 98%;
+    --primary-glow: 280 85% 75%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 240 15% 15%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 240 10% 12%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 280 100% 70%;
+    --accent-foreground: 240 10% 3.9%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 240 15% 20%;
+    --input: 240 15% 15%;
+    --ring: 260 75% 65%;
 
-    --radius: 0.5rem;
+    /* NEURA specific design tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(260 75% 65%), hsl(280 85% 75%));
+    --gradient-secondary: linear-gradient(135deg, hsl(240 15% 15%), hsl(240 10% 12%));
+    --gradient-hero: linear-gradient(135deg, hsl(240 10% 3.9%), hsl(260 30% 8%), hsl(280 40% 12%));
+    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(260 75% 65% / 0.3), transparent 70%);
+    
+    /* Level colors */
+    --level-core: 0 85% 65%;
+    --level-clear: 25 85% 65%;
+    --level-fluid: 60 85% 65%;
+    --level-bold: 200 85% 65%;
+    --level-pro: 280 85% 75%;
+
+    /* Chart colors */
+    --chart-1: 260 75% 65%;
+    --chart-2: 280 85% 75%;
+    --chart-3: 300 70% 70%;
+    --chart-4: 240 65% 60%;
+    --chart-5: 200 75% 65%;
+
+    /* Shadows and effects */
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
+    --shadow-elegant: 0 10px 30px -10px hsl(240 10% 3.9% / 0.5);
+    
+    /* Animation variables */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +130,89 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background: var(--gradient-hero);
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  /* NEURA Custom Components */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+  
+  .gradient-glow {
+    background: var(--gradient-glow);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-spring {
+    transition: var(--transition-spring);
+  }
+
+  /* Animated gradient background */
+  .animated-gradient {
+    background: linear-gradient(-45deg, 
+      hsl(240 10% 3.9%), 
+      hsl(260 30% 8%), 
+      hsl(280 40% 12%), 
+      hsl(260 25% 10%));
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Glass morphism effects */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Level indicator styles */
+  .level-core { color: hsl(var(--level-core)); }
+  .level-clear { color: hsl(var(--level-clear)); }
+  .level-fluid { color: hsl(var(--level-fluid)); }
+  .level-bold { color: hsl(var(--level-bold)); }
+  .level-pro { color: hsl(var(--level-pro)); }
+
+  /* Recording pulse animation */
+  .recording-pulse {
+    animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  /* Floating animation */
+  .floating {
+    animation: floating 3s ease-in-out infinite;
+  }
+
+  @keyframes floating {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
   }
 }
