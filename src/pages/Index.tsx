@@ -201,16 +201,9 @@ const Index = () => {
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="flex items-center justify-center mb-4">
-            <div className="w-16 h-16 mr-4 rounded-full bg-gradient-to-br from-purple-500 to-blue-600 flex items-center justify-center shadow-lg">
-              <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm-7.5 9c0-2.5 5.5-4 7.5-4s7.5 1.5 7.5 4v1h-15v-1z"/>
-              </svg>
-            </div>
-            <h1 className="text-6xl font-bold gradient-primary bg-clip-text text-transparent floating">
-              NEURA
-            </h1>
-          </div>
+          <h1 className="text-6xl font-bold gradient-primary bg-clip-text text-transparent mb-4 floating">
+            NEURA
+          </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Personalized Speech Development System powered by AI
           </p>
