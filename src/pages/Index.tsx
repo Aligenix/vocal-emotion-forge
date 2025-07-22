@@ -279,7 +279,20 @@ const Index = () => {
                     </div>
                     
                     {isRecording && (
-                      <div className="text-center">
+                      <div className="text-center space-y-4">
+                        {/* Animated Sound Wave */}
+                        <div className="flex items-center justify-center space-x-1">
+                          {[...Array(8)].map((_, i) => (
+                            <div
+                              key={i}
+                              className={`bg-primary rounded-full sound-wave-bar`}
+                              style={{
+                                width: '4px',
+                                height: '20px',
+                              }}
+                            />
+                          ))}
+                        </div>
                         <div className="text-2xl font-mono text-primary">
                           {formatTime(recordingTime)}
                         </div>
