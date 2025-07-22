@@ -114,8 +114,9 @@ const Index = () => {
     // Simulate AI analysis with realistic delay
     await new Promise(resolve => setTimeout(resolve, 3000));
     
-    // Mock analysis result based on narrative emotion
+    // Advanced AI analysis simulation for multi-emotion narratives
     const emotionScores = {
+      mixed: { energy: 82, confidence: 85, emotionalExpression: 90 },
       excitement: { energy: 85, confidence: 78, emotionalExpression: 82 },
       sorrow: { energy: 45, confidence: 65, emotionalExpression: 75 },
       anger: { energy: 90, confidence: 85, emotionalExpression: 88 },
@@ -129,12 +130,12 @@ const Index = () => {
     const variance = () => Math.random() * 20 - 10; // ±10 variation
     
     const scores = {
-      tonalVariation: Math.max(20, Math.min(100, 75 + variance())),
-      vocalRange: Math.max(20, Math.min(100, 70 + variance())),
-      confidence: Math.max(20, Math.min(100, baseScores.confidence + variance())),
-      energy: Math.max(20, Math.min(100, baseScores.energy + variance())),
-      clarity: Math.max(20, Math.min(100, 80 + variance())),
-      emotionalExpression: Math.max(20, Math.min(100, baseScores.emotionalExpression + variance()))
+      tonalVariation: Math.round(Math.max(20, Math.min(100, 75 + variance()))),
+      vocalRange: Math.round(Math.max(20, Math.min(100, 70 + variance()))),
+      confidence: Math.round(Math.max(20, Math.min(100, baseScores.confidence + variance()))),
+      energy: Math.round(Math.max(20, Math.min(100, baseScores.energy + variance()))),
+      clarity: Math.round(Math.max(20, Math.min(100, 80 + variance()))),
+      emotionalExpression: Math.round(Math.max(20, Math.min(100, baseScores.emotionalExpression + variance())))
     };
     
     const averageScore = Object.values(scores).reduce((a, b) => a + b, 0) / 6;
@@ -200,9 +201,20 @@ const Index = () => {
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-6xl font-bold gradient-primary bg-clip-text text-transparent mb-4 floating">
-            NEURA
-          </h1>
+          <div className="flex items-center justify-center mb-4">
+            <div className="w-16 h-16 mr-4 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center shadow-lg">
+              <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                <path d="M12 4c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-4 6c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm8 0c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2z"/>
+                <circle cx="9" cy="9" r="1"/>
+                <circle cx="15" cy="9" r="1"/>
+                <circle cx="12" cy="15" r="1"/>
+              </svg>
+            </div>
+            <h1 className="text-6xl font-bold gradient-primary bg-clip-text text-transparent floating">
+              NEURA
+            </h1>
+          </div>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Personalized Speech Development System powered by AI
           </p>

@@ -14,63 +14,63 @@ interface Narrative {
 const narratives: Narrative[] = [
   {
     id: "1",
-    text: "I never thought I could climb to the top of that mountain, but as I stood there watching the sunrise paint the sky in brilliant oranges and pinks, I felt an incredible rush of pride and accomplishment. Every step of that difficult journey was worth this magical moment!",
-    emotion: "excitement",
-    description: "Express pure joy and triumph"
+    text: "What an incredible day this turned out to be! I woke up feeling nervous about the presentation, but as I stood before the audience, my confidence grew with each word. When they erupted in applause, I felt a surge of pure excitement and joy. However, when I remembered my grandmother who always believed in me but couldn't be there to see this moment, a wave of sadness washed over me. Then anger crept in as I thought about all the people who doubted my abilities. But that fear of failure that once paralyzed me now seemed so distant and conquered.",
+    emotion: "mixed",
+    description: "Express excitement, joy, sorrow, anger, and overcoming fear"
   },
   {
     id: "2", 
-    text: "The old photograph fell from the dusty book, showing my grandmother's gentle smile one last time. I held it close to my heart, feeling the weight of all our lost conversations and the stories I'll never hear again.",
-    emotion: "sorrow",
-    description: "Convey deep sadness and loss"
+    text: "The graduation ceremony was everything I had dreamed of and more. Walking across that stage filled me with overwhelming joy and excitement for the future ahead. But as I looked into the crowd and saw the empty seat where my father should have been, grief struck my heart like lightning. The anger I felt toward the illness that took him away burned inside me, while fear about facing the world without his guidance made my hands tremble. Yet somehow, through all these emotions, I found the courage to smile and wave at my family.",
+    emotion: "mixed",
+    description: "Navigate joy, excitement, sorrow, anger, and fear in one narrative"
   },
   {
     id: "3",
-    text: "This is completely unacceptable! How could you make such a decision without consulting anyone? The consequences of your actions will affect everyone here, and frankly, I'm furious that you thought this was okay!",
-    emotion: "anger",
-    description: "Show controlled fury and indignation"
+    text: "The old photo album fell open to a picture of our family vacation from ten years ago. My heart filled with such pure joy seeing all of us together, laughing on the beach. The excitement of those summer days came flooding back - building sandcastles, racing through the waves. But then the crushing sorrow hit me as I realized my brother and I haven't spoken in two years after our terrible fight. The anger I still feel about his harsh words makes my chest tight, while the fear that we might never reconcile keeps me awake at night.",
+    emotion: "mixed",
+    description: "Blend joy, excitement, deep sorrow, lingering anger, and fear"
   },
   {
     id: "4",
-    text: "The sound of footsteps echoing in the empty hallway made my heart race. I pressed myself against the wall, trying to stay invisible, as shadows danced menacingly in the flickering light. What if someone was actually there?",
-    emotion: "fear",
-    description: "Express anxiety and terror"
+    text: "Starting my own business has been an emotional rollercoaster unlike anything I've ever experienced. The excitement of seeing my first customer walk through the door was absolutely electrifying - pure joy coursed through my veins! But when the bills started piling up and customers stopped coming, the sorrow was overwhelming. I became angry at myself for taking such a foolish risk, and fear consumed me as I worried about losing everything I had worked for. Every emotion battles for control of my heart.",
+    emotion: "mixed",
+    description: "Express excitement, joy, sorrow, self-directed anger, and deep fear"
   },
   {
     id: "5",
-    text: "When I saw my best friend walking through that door after two years apart, I couldn't contain my happiness! We ran toward each other laughing and crying at the same time. Nothing in the world could have made me happier than this perfect reunion!",
-    emotion: "joy",
-    description: "Radiate pure happiness and delight"
+    text: "The championship game was the culmination of years of training and sacrifice. As we scored the winning goal, pure excitement and joy exploded from every part of my being - we had actually done it! But looking at my injured teammate on the bench, unable to play in our moment of triumph, filled me with profound sorrow. I felt angry at the unfairness of sports injuries, and fear crept in about whether this success was truly deserved. These conflicting emotions made victory bittersweet.",
+    emotion: "mixed",
+    description: "Navigate excitement, joy, sorrow, anger, and fear in triumph"
   },
   {
     id: "6",
-    text: "I can't believe we actually won the championship! All those months of practice, the early morning training sessions, the setbacks and victories - it all led to this incredible moment. We proved that dreams really do come true when you never give up!",
-    emotion: "excitement",
-    description: "Channel triumph and exhilaration"
+    text: "When I received the call about my promotion, excitement shot through me like electricity - this was the opportunity I had dreamed about for years! The joy was infectious as I called my family to share the news. But then reality set in, and sorrow filled my heart knowing I would have to move away from everyone I love. Anger bubbled up as I questioned why success has to come with such difficult choices, and fear about starting over in a new city made my stomach churn with anxiety.",
+    emotion: "mixed",
+    description: "Experience excitement, joy, sorrow, anger, and fear about change"
   },
   {
     id: "7",
-    text: "As I walked through the empty house for the last time, each room whispered memories of the family that once filled these walls with laughter. Now only silence remains, heavy with the echoes of a lifetime that has passed.",
-    emotion: "sorrow", 
-    description: "Express melancholy and nostalgia"
+    text: "The art gallery opening was supposed to be my big break. Walking into the space and seeing my paintings on display filled me with such excitement and joy - my dreams were finally becoming reality! But as I overheard critics dismissing my work as 'amateur,' crushing sorrow replaced my elation. Anger burned inside me at their harsh judgment, while fear whispered that maybe they were right. These emotions swirled together as I tried to maintain my composure in front of the crowd.",
+    emotion: "mixed",
+    description: "Convey excitement, joy, sorrow, anger, and self-doubt fear"
   },
   {
     id: "8",
-    text: "How dare you question my integrity! I have worked tirelessly for this organization for fifteen years, and I will not stand here and listen to these baseless accusations. This is an outrageous attack on my character!",
-    emotion: "anger",
-    description: "Show righteous indignation"
+    text: "Reuniting with my childhood best friend after fifteen years brought waves of pure joy and excitement - we picked up exactly where we left off! But as she told me about all the adventures and milestones I had missed, deep sorrow settled in my chest. I felt angry at life for pulling us in different directions, and fear gripped me that too much time had passed for us to truly reconnect. The complexity of these emotions made our reunion both beautiful and heartbreaking.",
+    emotion: "mixed",
+    description: "Express joy, excitement, sorrow, anger, and fear about lost time"
   },
   {
     id: "9",
-    text: "The storm was getting worse, and I realized I was completely lost in the forest. Every tree looked the same, every path led nowhere, and darkness was falling fast. My phone had no signal, and panic was setting in.",
-    emotion: "fear",
-    description: "Convey growing panic and helplessness"
+    text: "The birth of my first child brought indescribable joy and excitement - holding this tiny miracle filled my heart to overflowing! But as I watched my partner struggle through a difficult labor, profound sorrow and worry consumed me. Anger flared at my helplessness in that moment, and overwhelming fear about my ability to be a good parent made my hands shake. Every emotion known to humanity seemed to crash over me in those precious first moments of parenthood.",
+    emotion: "mixed",
+    description: "Navigate joy, excitement, sorrow, anger, and parental fear"
   },
   {
     id: "10",
-    text: "Surprise! The entire family had gathered for my birthday, even my cousin from Australia who I hadn't seen in five years. The room erupted in laughter and cheers as I stood there overwhelmed by so much love and thoughtfulness!",
-    emotion: "joy",
-    description: "Express overwhelming happiness and gratitude"
+    text: "Standing at my mentor's retirement party, I felt such excitement and joy celebrating her incredible career and the impact she had made. Her wisdom had shaped so many lives, including mine. But the sorrow of knowing she wouldn't be there to guide me anymore was overwhelming. Anger surfaced as I thought about how undervalued teachers are in our society, and fear crept in about navigating my career without her steady presence. These emotions made my farewell speech both a celebration and a lament.",
+    emotion: "mixed",
+    description: "Express excitement, joy, sorrow, anger, and fear about transition"
   }
 ];
 
@@ -106,6 +106,8 @@ export const NarrativeGenerator = ({ onNarrativeChange, currentNarrative }: Narr
 
   const getEmotionColor = (emotion: string) => {
     switch (emotion) {
+      case "mixed":
+        return "bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 border-blue-500/30";
       case "excitement":
         return "bg-orange-500/20 text-orange-300 border-orange-500/30";
       case "sorrow":
